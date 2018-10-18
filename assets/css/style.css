@@ -1,0 +1,38 @@
+html {
+    background-image: url("../images/rpg_background.png");
+    background-size: cover;
+   
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#paladin, #berserker, #mage, #ranger {
+    height: 100px;
+    width: 100px;
+}
+
+
+.column1 {
+    float: right;
+    margin-right: 10%;
+    white-space: pre;
+    
+}
+.column {
+    color: #ffffff;
+}
+
+.wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
