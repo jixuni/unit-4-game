@@ -30,7 +30,10 @@ var charList = {
 }
 
 
-
+// $("#paladin") = charList.paladin;
+// $("#ranger") = charList.ranger;
+// $("#berserker") = charList.berserker;
+// $("mage") = charList.mage;
 var currentCharacter;
 var currentEnemy;
 var $pal = $("#paladin"); 
@@ -46,7 +49,11 @@ keys.length
 
 $(".character").on("click", function(){
     if(currentCharacter === undefined && $(this).attr("id") == "paladin"){
-        currentCharacter = charList.paladin;
+        // $(this).attr("characterinfo", JSON.stringify(charList.paladin))
+        // currentCharacter = charList.paladin;
+        var currentChar = $(this).attr("id")
+
+        console.log(charList[currentChar].healthPoints);
         $(this).css("transform", "scaleX(-1)");
         
     } else if(currentCharacter === undefined && $(this).attr("id") == "berserker"){
@@ -66,13 +73,13 @@ $(".character").on("click", function(){
 })
 
 var currentSelect = $(".character").on("click", function() {
-     currentSelect = $(this).attr("id")
-     $(this).css("transform", "scaleX(-1)")
+    currentSelect = $(this).attr("id")
+    $(this).css("transform", "scaleX(-1)")
     });
-
+    
 
 function battle (){
-     
+     console.log("current select", currentSelect)
     switch(currentSelect) {
         case "mage":
             if(currentSelect !== currentCharacter.occupation){
