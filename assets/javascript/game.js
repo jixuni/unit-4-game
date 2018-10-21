@@ -30,7 +30,7 @@ var charList = {
 }
 
 
-// $("#paladin") = charList.paladin;
+
 // $("#ranger") = charList.ranger;
 // $("#berserker") = charList.berserker;
 // $("mage") = charList.mage;
@@ -67,6 +67,7 @@ $(".character").on("click", function() {
 
 // calculation for health and attack
 $(".attack").on("click",function(){
+    animation();
     $(".attackSound").get(0).play();
     charList[currentEnemy].healthPoints -= attackIncrement;
     charList[currentCharacter].healthPoints -= charList[currentEnemy].attackPower;
@@ -85,6 +86,18 @@ function gameStatus (){
     if(charList[currentCharacter].healthPoints <= 0 || winCounter === len-1){ // check if condition is meet to win the game
         $(".screentext").text("GAME OVER!!");
         $(".attack").prop("disabled",true);
+    }
+}
+// some reason my animation only works for 1 character at a time
+function animation(){ 
+    if(currentCharacter == "paladin"){
+        document.getElementById("paladin").className = "classname";
+    } else if( currentCharacter == "mage"){
+        document.getElementById("mage").className = "classname";
+    } else if( currentCharacter == "ranger"){
+        document.getElementById("ranger").className = "classname";
+      }  else if( currentCharacter == "berserker"){
+            document.getElementById("berserker").className = "classname";
     }
 }
 

@@ -18,6 +18,21 @@ h1 {
 #paladin, #berserker, #mage, #ranger {
     height: 100px;
     width: 100px;
+    
+}
+
+.classname {
+    animation-name: moveChar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes moveChar {
+    from {
+        transform: 0;
+    }
+    to {
+        transform: translateX(50px);
+    }
 }
 
 
@@ -88,4 +103,8 @@ button:active {
 bottom: 75px;
 position: relative;
 left: 5px;
+}
+
+.animatePaladin {
+
 }
