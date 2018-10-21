@@ -66,16 +66,22 @@ button:active {
     bottom: 50px;
     left: 120px;
 }
+
+.attack:active{
+    background: #928a14
+}
 .reset {
     background-color:  rgb(94, 255, 0);
     bottom: 50px;
     left: 120px;
 }
-
 .fas {
     background-color:  rgba(255, 0, 43, 0.973);
     bottom: 50px;
     left: 120px;
+}
+.fas:active {
+    background-color: #860c0c
 }
 
 .row {
