@@ -92,8 +92,12 @@ $(".reset").on("click", function(){
     location.reload();
 })
 
-$(".music").on("click",function(){
+$("#music").on("click",function(){
     $(".attackMusic").get(0).play();
+})
+
+$("#pause").on("click",function(){
+    $(".attackMusic").get(0).pause();
 })
 
 // $(".character").on("click", function(){
