@@ -41,7 +41,7 @@ var attackPowerCounter;
 var winCounter = 0;
 var startGame = false;
 
-var keys = Object.keys(charList); 
+var keys = Object.keys(charList); // Didnt know how to get the lenght of Object this so i did this
 var len = keys.length;
 
 
@@ -51,7 +51,7 @@ $(".character").on("click", function() {
             currentCharacter = $(this).attr("id");
             $(".screentext").text("Pick your opponent");
             $(this).css("transform", "scaleX(-1)");
-            attackIncrement = charList[currentCharacter].attackPower
+            attackIncrement = charList[currentCharacter].attackPower // Had to initialize a global variable here, if i just added the  charList[currentCharacter].attackPower the number would be 2x
             console.log(currentCharacter);
         if(currentCharacter !== undefined && currentEnemy === undefined){
             $(".character").on("click", function(){
@@ -65,7 +65,7 @@ $(".character").on("click", function() {
 })
 
 
-
+// calculation for health and attack
 $(".attack").on("click",function(){
     $(".attackSound").get(0).play();
     charList[currentEnemy].healthPoints -= attackIncrement;
@@ -79,26 +79,38 @@ $(".attack").on("click",function(){
 function gameStatus (){
     if(charList[currentEnemy].healthPoints <= 0 && charList[currentCharacter].healthPoints > 0){
         $(".screentext").text("Pick another opponent!!");
-        winCounter ++;
+        winCounter ++; // adds winning counter 
         currentSelect = undefined;    
     } 
-    if(charList[currentCharacter].healthPoints <= 0 || winCounter === len-1){
+    if(charList[currentCharacter].healthPoints <= 0 || winCounter === len-1){ // check if condition is meet to win the game
         $(".screentext").text("GAME OVER!!");
         $(".attack").prop("disabled",true);
     }
 }
 
-$(".reset").on("click", function(){
+$(".reset").on("click", function(){ // reset button
     location.reload();
 })
 
-$("#music").on("click",function(){
+$("#music").on("click",function(){ // play button
     $(".attackMusic").get(0).play();
 })
 
-$("#pause").on("click",function(){
+$("#pause").on("click",function(){ // pause button
     $(".attackMusic").get(0).pause();
 })
+
+
+
+
+
+
+/* ------- Many bugs below, tried using the Switch statement for apha version of this game------ */
+
+
+
+
+
 
 // $(".character").on("click", function(){
 //     if(currentCharacter === undefined ){
