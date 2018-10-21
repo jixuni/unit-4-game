@@ -1,32 +1,30 @@
-html {
-    background-image: url("../images/rpg_background.png");
-    background-size: cover;
-    position: relative;
-    background-repeat: no-repeat;
-}
 
 body {
     font-family: 'Press Start 2P', cursive;
+    background-image: url("../images/rpg_background.png");
+    background-repeat: no-repeat;
+    background-position: absolute;
 }
 
 
 h1 {
     font-size: 30px;
     font-weight: 600;
+    position: relative;
+    left: 200px;
+
 }
 
 #paladin, #berserker, #mage, #ranger {
     height: 100px;
     width: 100px;
-
-    
 }
 
 
 .column1 {
-    float: right;
-    margin-right: 10%;
     white-space: pre;
+    position: relative;
+    left: 425px;
     
 }
 .column {
@@ -44,3 +42,44 @@ h1 {
     display: none;
 }
 
+button {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    border-width: 5px;
+    border-color: black;
+    box-shadow: 0 5px #999;
+    border-radius: 15px;
+}
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.attack{
+    background: rgb(230, 226, 3);
+    bottom: 50px;
+    left: 120px;
+}
+.reset {
+    background-color:  rgb(94, 255, 0);
+    bottom: 50px;
+    left: 120px;
+}
+
+.music {
+    background-color:  rgba(255, 0, 43, 0.973);
+    bottom: 50px;
+    left: 120px;
+}
+
+.row {
+bottom: 75px;
+position: relative;
+left: 5px;
+}
